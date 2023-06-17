@@ -1,0 +1,37 @@
+.navMenu {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 14px;
+    
+  }
+  
+  .navMenu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .navMenu li {
+    margin: 0 1rem;
+    flex: 1;
+    text-align: center;
+  }
+  
+  .navMenu a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  
+  .navMenu a:hover, .navMenu a:active {
+    background-color: #ddd;
+    border-radius: 14px;
+  }

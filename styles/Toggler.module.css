@@ -1,0 +1,27 @@
+.header {
+    border: 1px solid #000;
+    background-color: black;
+    padding: .5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.content {
+    border-top: none;
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.hidden {
+    display: none;
+}

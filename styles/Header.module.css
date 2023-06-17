@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    
+    
+}
+
+.titre {
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+@media (min-width: 40rem) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px;
+
+    }
+}
