@@ -26,15 +26,14 @@ const App = ({ Component, pageProps }) => {
           html {
             font-family: ${roboto.style.fontFamily};
           }
-
           h1, h2, h3, h4, h5, h6 {
             font-family: ${montserrat.style.fontFamily};
           }
         `}
       </style>
-      
-      
-      
+
+
+
       <Component {...pageProps} />
     </Provider>
   );

@@ -27,4 +27,4 @@ export default function Layout({ page, setPage }) {
       <Footer />
     </>
   );
-}
+    }
