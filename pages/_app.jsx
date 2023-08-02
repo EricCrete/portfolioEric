@@ -1,26 +1,43 @@
+import 'normalize.css/normalize.css';
+import '../styles/globals.css';
 
-import 'normalize.css/normalize.css'
-import '../styles/globals.css'
+import { Roboto_Flex, Montserrat } from '@next/font/google';
 
-import { Roboto_Flex, Montserrat } from '@next/font/google'
+import { Provider } from 'react-redux';
+import store from '../redux/store';
+import React, { useState } from 'react';
+import TemoignagesListe from '../components/TemoignageListe';
+import AjouterTemoignage from '../components/AjouterTemoignage';
 
 const roboto = Roboto_Flex();
 const montserrat = Montserrat();
 
-export default function App({ Component, pageProps }) {
-  return <>
-    <style jsx global>
-      {`
-        html {
-          font-family: ${roboto.style.fontFamily}
-        }
+const App = ({ Component, pageProps }) => {
+  const [temoignages, setTemoignages] = useState([]);
 
-        h1, h2, h3, h4, h5, h6 {
-          font-family: ${montserrat.style.fontFamily}
-        }
-      `}
-    </style>
+  const ajouterTemoignage = (nouveauTemoignage) => {
+    setTemoignages([...temoignages, nouveauTemoignage]);
+  };
+
+  return (
+    <Provider store={store}>
+      <style jsx global>
+        {`
+          html {
+            font-family: ${roboto.style.fontFamily};
+          }
+
+          h1, h2, h3, h4, h5, h6 {
+            font-family: ${montserrat.style.fontFamily};
+          }
+        `}
+      </style>
+      
+      
       
       <Component {...pageProps} />
-  </>
-}
+    </Provider>
+  );
+};
+
+export default App;

@@ -3,27 +3,7 @@ import styles from '../styles/Project.module.css'
 import Image from 'next/image';
 
 
-/*export default function Portfolio({images}) {
-    return (
-        <div className={styles.Oldies}>
-          <h1 className="title">Old Timers</h1>
-          {images.map((element, index) =>
-          <Image
-          src={element.src} 
-          alt={element.alt} 
-          width={element.width} 
-          height={element.height} 
-          key={index} />
-          
-          
-          )}
-          
-            
-           
-          
-        </div>
-      );
-    };*/
+
 
     export default function Portfolio() {
       return (
@@ -32,7 +12,17 @@ import Image from 'next/image';
             <p className={styles.description}>
           Website allowing you to sign up to classes by using JS and databases
         </p>
+        <div className={styles.imageContainer}>
+        <Image src="/Oldies.PNG" alt="Oldies1" width={600} height={336} />
+        </div>
+        <div className={styles.imageContainer}>
+        <Image src="/Oldies2.PNG" alt="Oldies2" width={600} height={336} />
+        </div>
+        <div className={styles.imageContainer}>
+        <Image src="/Oldies3.PNG" alt="Oldies3" width={600} height={336} />
+        </div>
             
           </div>
+          
         );
       };

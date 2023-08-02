@@ -25,3 +25,7 @@
 .hidden {
     display: none;
 }
+
+.page-content {
+    margin-top: 100px; /* Adjust the value to your preference */
+  }

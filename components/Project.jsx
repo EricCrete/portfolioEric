@@ -1,4 +1,5 @@
 import styles from '../styles/Project.module.css'
+import Image from 'next/image';
 
 export default function IndexPage(){
     return (
@@ -8,28 +9,11 @@ export default function IndexPage(){
         <p className={styles.description}>
         Desktop App allowing users to select diferent items in different quantities and calculating the prices of both the items and of the total
         </p>
+        <div className={styles.imageContainer}>
+        <Image src="/Caisse.PNG" alt="Systeme Caisses" width={600} height={336} />
+      </div>
         
     </div>
     );
-    /*export default function Portfolio({images}) {
-    return (
-        <div className={styles.Oldies}>
-          <h1 className="title">Old Timers</h1>
-          {images.map((element, index) =>
-          <Image
-          src={element.src} 
-          alt={element.alt} 
-          width={element.width} 
-          height={element.height} 
-          key={index} />
-          
-          
-          )}
-          
-            
-           
-          
-        </div>
-      );
-    };*/
+    
 };
