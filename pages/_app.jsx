@@ -9,6 +9,25 @@ import React, { useState } from 'react';
 import TemoignagesListe from '../components/TemoignageListe';
 import AjouterTemoignage from '../components/AjouterTemoignage';
 
+import React, { useState } from 'react';
+import TemoignagesListe from './TemoignagesListe';
+import AjouterTemoignage from './AjouterTemoignage';
+
+const App = () => {
+  const [temoignages, setTemoignages] = useState([]);
+
+  const ajouterTemoignage = (nouveauTemoignage) => {
+    setTemoignages([...temoignages, nouveauTemoignage]);
+  };
+
+  return (
+    <div>
+      <TemoignagesListe temoignages={temoignages} />
+      <AjouterTemoignage ajouterTemoignage={ajouterTemoignage} />
+    </div>
+  );
+};
+
 const roboto = Roboto_Flex();
 const montserrat = Montserrat();
 
